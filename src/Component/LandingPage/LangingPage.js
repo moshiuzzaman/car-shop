@@ -6,9 +6,7 @@ import { BsSearch } from 'react-icons/bs';
 import { carData } from '../../CarData';
 import SingleCar from './SingleCar';
 const LangingPage = () => {
-    let AllCars = carData
     const [search, setSearch] = useState("");
-
     const carfilter = carData.filter(cd => {
         return cd.brand.toLowerCase().indexOf(search.toLowerCase()) !== -1
     })
