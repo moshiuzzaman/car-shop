@@ -1,0 +1,11 @@
+.ml-auto.navbar-nav a {
+    padding: 0 20px;
+    color:white;
+    font-weight: 500;
+}
+.header {
+    background: #363434;
+}
+a.navbar-brand {
+    color: white !important;
+}

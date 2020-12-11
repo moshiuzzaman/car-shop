@@ -1,0 +1,7 @@
+h2.product.title {
+    color: #078a9f;
+    text-transform: uppercase;
+}
+label.form-label , label.form-file-label, input#formGridImage {
+    color: #078a9f;
+}

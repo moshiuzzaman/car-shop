@@ -7,9 +7,11 @@ import {
   Route
 } from "react-router-dom";
 import NotFound from './Component/NotFound/NotFound';
-import CarDetails from './Component/CarDetails/CarDetails';
 import AddCar from './Component/AddCar/AddCar';
-import EditDetails from './Component/CarDetails/EditDetails';
+import CarDetails from './Component/CarDetails/CarDetails';
+import EditDetails from './Component/AddCar/EditDetails';
+import NewAddedCarDetails from './Component/AddCar/NewAddedCarDetails';
+import './App.css'
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
         </Route>
         <Route exact path='/'>
           <LangingPage />
+        </Route>
+        <Route path='/newAddedCar/:id'>
+          <NewAddedCarDetails/>
         </Route>
         <Route path='/editDetails/:id'>
           <EditDetails/>
