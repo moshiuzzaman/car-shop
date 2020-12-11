@@ -5,7 +5,6 @@ import { Link, useHistory } from 'react-router-dom';
 
 const SingleCar = ({ CarDetails }) => {
     const { carName, image, price, _id, rating } = CarDetails
-    console.log(CarDetails)
     const history = useHistory()
     const redirect = () => {
         history.push(`/cardetails/${_id}`)
@@ -16,7 +15,7 @@ const SingleCar = ({ CarDetails }) => {
     });
     const [modalShow, setModalShow] = React.useState(false);
     const feedbackHandeler=()=>{
-        fetch(`http://localhost:5000/review/${_id}`, {
+        fetch(`https://fathomless-tundra-53591.herokuapp.com/review/${_id}`, {
             method: 'PATCH',
             body: JSON.stringify({ ratingAndComment }),
             headers: { "Content-Type": "application/json" }
@@ -43,7 +42,7 @@ const SingleCar = ({ CarDetails }) => {
                         Price : ${price}
                     </Card.Text>
                     <Link to={`/cardetails/${_id}`}><Button variant="primary">Car Details</Button></Link>
-                    <Button variant="primary" onClick={() => setModalShow(true)}>Car Details</Button>
+                    <Button variant="primary" onClick={() => setModalShow(true)}>Add review</Button>
                 </Card.Body>
             </Card>
             <Modal

@@ -11,9 +11,9 @@ const LangingPage = () => {
     const [search, setSearch] = useState("");
     const [allCars, setAllCars] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [carsPerPage, setCarPerPage] = useState(6)
+    const [carsPerPage] = useState(6)
     useEffect(() => {
-        fetch('http://localhost:5000/allCars')
+        fetch('https://fathomless-tundra-53591.herokuapp.com/allCars')
             .then(response => response.json())
             .then(data => setAllCars(data))
     }, [])

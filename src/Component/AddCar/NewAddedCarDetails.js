@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Form, Modal, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { Link, useHistory, useParams } from 'react-router-dom';
+import {  useHistory, useParams } from 'react-router-dom';
 import Header from '../Header/Header';
 
 const NewAddedCarDetails = (
@@ -11,15 +11,13 @@ const NewAddedCarDetails = (
     const history = useHistory()
     const [allCars, setAllCars] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/allCars')
+        fetch('https://fathomless-tundra-53591.herokuapp.com/allCars')
             .then(response => response.json())
             .then(data => setAllCars(data))
     }, [])
-    console.log('object')
-    console.log("afflj" + id)
     const carDetails = allCars.find(cd => cd.id === id)
     const deleteHandler = (id) => {
-        fetch(`http://localhost:5000/carDelete/${id}`, {
+        fetch(`https://fathomless-tundra-53591.herokuapp.com/carDelete/${id}`, {
             method: 'DELETE',
         })
             .then(response => response.json())
@@ -33,12 +31,11 @@ const NewAddedCarDetails = (
     const [modalShow, setModalShow] = React.useState(false);
     const { register, handleSubmit } = useForm();
     const onSubmit = (data, e) => {
-        console.log(data);
         const formData = new FormData()
         formData.append('carName', data.carName)
         formData.append('price', data.price)
         formData.append('carDiscription', data.carDiscription)
-        fetch(`http://localhost:5000/editDetails/${id}`, {
+        fetch(`https://fathomless-tundra-53591.herokuapp.com/editDetails/${id}`, {
             method: 'PATCH',
             body: formData
         })

@@ -17,7 +17,7 @@ const AddCar = () => {
         formData.append('price', data.price)
         formData.append('carDiscription', data.carDiscription)
         formData.append('brandName', data.brandName)
-        fetch('http://localhost:5000/addCar', {
+        fetch('https://fathomless-tundra-53591.herokuapp.com/addCar', {
             method: 'POST',
             body: formData
         })

@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { useHistory, useLocation, useParams } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
 import Header from '../Header/Header';
 
 const EditDetails = () => {
-    const history=useHistory()
-    const location=useLocation()
     const [allCars, setAllCars] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/allCars')
+        fetch('https://fathomless-tundra-53591.herokuapp.com/allCars')
             .then(response => response.json())
             .then(data => setAllCars(data))
     }, [])
@@ -21,7 +19,7 @@ const EditDetails = () => {
         formData.append('carName', data.carName)
         formData.append('price', data.price)
         formData.append('carDiscription', data.carDiscription)
-        fetch(`http://localhost:5000/editDetails/${id}`, {
+        fetch(`https://fathomless-tundra-53591.herokuapp.com/editDetails/${id}`, {
             method: 'PATCH',
             body: formData
         })
@@ -29,8 +27,6 @@ const EditDetails = () => {
             .then(data => {
                 if (data) {
                     alert('Successfully Updated cars')
-                    console.log(location , history)
-                    // history.push(`http://localhost:3000/editDetails/${id}`)
                 }
             })
     }
