@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router-dom';
+import { useHistory, useLocation, useParams } from 'react-router-dom';
 import Header from '../Header/Header';
 
 const EditDetails = () => {
+    const history=useHistory()
+    const location=useLocation()
     const [allCars, setAllCars] = useState([])
     useEffect(() => {
         fetch('http://localhost:5000/allCars')
@@ -12,16 +14,13 @@ const EditDetails = () => {
             .then(data => setAllCars(data))
     }, [])
     const { id } = useParams()
-    const carDetails = allCars.find(cd => cd._id === id)
+    const carDetails = allCars.find(cd => cd.id === id)
     const { register, handleSubmit } = useForm();
     const onSubmit = (data, e) => {
-        console.log(data);
         const formData = new FormData()
-        formData.append('file', data.image[0])
         formData.append('carName', data.carName)
         formData.append('price', data.price)
         formData.append('carDiscription', data.carDiscription)
-        formData.append('brandName', data.brandName)
         fetch(`http://localhost:5000/editDetails/${id}`, {
             method: 'PATCH',
             body: formData
@@ -30,7 +29,8 @@ const EditDetails = () => {
             .then(data => {
                 if (data) {
                     alert('Successfully Updated cars')
-                    e.target.reset();
+                    console.log(location , history)
+                    // history.push(`http://localhost:3000/editDetails/${id}`)
                 }
             })
     }

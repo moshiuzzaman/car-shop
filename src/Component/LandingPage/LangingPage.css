@@ -1,0 +1,25 @@
+.mb-3.searchbar.input-group {
+    width: 70%;
+}
+input.search-input.form-control {
+    border: 1px solid #078a9f;
+}
+span.search-input_icon.input-group-text {
+    background: #078a9f;
+    color: white;
+    border: 1px solid #078a9f;
+}
+img.card-img-top {
+    max-height: 230px !important;
+}
+.card-title.h5 {
+    color: #078a9f;
+}
+button.btn.btn-primary {
+    background: #078a9f;
+    border: none !important;
+    margin: 0 5px;
+}
+span.MuiRating-root {
+    padding-top: 10px;
+}
