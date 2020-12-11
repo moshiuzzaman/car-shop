@@ -1,70 +1,66 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# How to o run the project successfully
 
-In the project directory, you can run:
+☛ first go to your folder path by useing git bash where you want to clone this project 
 
-### `npm start`
+☛ then use this commend $ git clone https://github.com/moshiuzzaman/car-shop.git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+☛ then use commend npm install
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+☛ then use commend npm start 
 
-### `npm test`
+I hope you run this project by useing this commend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+# Now i discuss about this project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Car Shop Web App
+✿✿✿[LIVE WEBSITE](https://car-shop-4427f.web.app/)✿✿✿ [</> Backend Code](https://github.com/moshiuzzaman/car-shop-server.git)✿✿✿
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A full-stack responsive Car review web app. That's also multipage. This app has so meny feature.
 
-### `npm run eject`
+ ### Features : ↴
+☛ user can search cars by brand name
+ 
+☛ user can see a car details by clicking any car image or clicking car details button
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+ ☛ user can get star review and comment by clicking add review burtton
+ 
+☛ user can add a car by add car menu
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+☛ if user add a car the webpage redirect new added car detais page there user see edit details and delete button
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+☛ in edit details section user can updeate new added car details and if he click then car will delete
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Technology: 
 
-## Learn More
+✶ React.js 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+✶ Rest Api 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+✶ React Router 
 
-### Code Splitting
+✶ React Hook Form 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+✶ Node.js 
 
-### Analyzing the Bundle Size
+✶ Express.js 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+✶ MongoDB 
 
-### Making a Progressive Web App
+✶ React Bootstrap 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+✶ Heroku 
 
-### Advanced Configuration
+✶ Firebase
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+✶ HTML 
 
-### Deployment
+✶ CSS 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Thanks for see my project
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
